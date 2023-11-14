@@ -15,7 +15,8 @@ int Size = 50;
 
 int score = 0;
 int speed = 1;
-
+int basteroidsnb = 5;
+//int bulletnb = 7;
 
 struct Ship {      // Tableau du vaisseau
     float x;
@@ -25,10 +26,28 @@ struct Ship {      // Tableau du vaisseau
     sfVector2f dir;
 };
 
+struct BigAsteroids {      // Tableau des asteroides
+    float x;
+    float y;
+    float angle;
+    float vit;
+    sfVector2f dir;
+    sfSprite* shape;  // Ajout du sfCircleShape pour chaque astéroïde
+};
+
+/*struct Bullet {      // Tableau des asteroides
+    float x;
+    float y;
+    float angle;
+    float vit;
+    sfVector2f dir;
+    sfSprite* bullet;  // Ajout du sfCircleShape pour chaque astéroïde
+};*/
+
 
 struct Ship s;
-
-
+struct BigAsteroids ba[5];
+//struct Bullet b [7];
 
 /*void Die(sfRenderWindow* window, sfText* ScoreText, sfFont* font, sfText* GameOver, sfText* Exit) {
 
@@ -70,30 +89,98 @@ struct Ship s;
 
 }*/
 
+void BigAsteroids() {
+
+    int windowWidth = sfVideoMode_getDesktopMode().width / 2;
+    int windowHeight = sfVideoMode_getDesktopMode().height / 2;
+
+    // Création asteroids / type / taille / texture
+    sfSprite* bigasteroids = sfSprite_create();
+    sfSprite_setScale(bigasteroids,(sfVector2f){0.5f, 0.5f});
+
+    sfTexture* astero = sfTexture_createFromFile("caillou.png", NULL);
+    sfSprite_setTexture (bigasteroids, astero,1);
+    sfSprite_setOrigin(bigasteroids, (sfVector2f) {315 / 2, 250 / 2});
+
+    for (int i = 0; i < basteroidsnb; ++i) {
+        ba[i].x = rand() % windowWidth;
+        ba[i].y = rand() % windowHeight;
+        ba[i].angle = (float)(rand() % 360);
+        ba[i].shape = sfSprite_create();
+        sfSprite_setScale(ba[i].shape,(sfVector2f){0.5f, 0.5f});
+        sfSprite_setTexture(ba[i].shape, astero, 1);
+        sfSprite_setOrigin(ba[i].shape, (sfVector2f){315 / 2, 250 / 2});
+    }
+
+    for (int i = 0; i < basteroidsnb; ++i) {
+
+        ba[i].vit = 0.3;
+        ba[i].dir.x = cosf(ba[i].angle * 3.14 / 180);
+        ba[i].dir.y = sinf(ba[i].angle * 3.14 / 180);
+    }
+
+
+}
+
+/*void Bullet(){
+
+    int windowWidth = sfVideoMode_getDesktopMode().width / 2;
+    int windowHeight = sfVideoMode_getDesktopMode().height / 2;
+
+    // Création des projectiles du vaisseau / type / taille / texture
+    sfSprite* bullet = sfSprite_create();
+    sfSprite_setScale(bullet,(sfVector2f){0.1f, 0.1f});
+
+    sfTexture* astero = sfTexture_createFromFile("bullet.png", NULL);
+    sfSprite_setTexture (bullet, bullet,1);
+    sfSprite_setOrigin(bullet, (sfVector2f) {608 / 2, 608 / 2});
+
+
+
+}*/
+
 void Action() {
 
     int windowWidth = sfVideoMode_getDesktopMode().width / 2;
     int windowHeight = sfVideoMode_getDesktopMode().height / 2;
 
+   // a[i].vit = 0.5
 
-    // wraparound
-    if (s.y < - 100) {s.y = windowHeight - 1;}
-    else if (s.y >= windowHeight) {s.y = 100;}
+    // wraparound vaisseau
+    if (s.y < - 10) {s.y = windowHeight + 10;}
+    else if (s.y >= windowHeight + 10) {s.y = -10;}
 
-    if (s.x < - 100) {s.x = windowWidth - 1;}
-    else if (s.x >= windowWidth) { s.x = -100;}
+    if (s.x < - 10) {s.x = windowWidth + 10;}
+    else if (s.x >= windowWidth + 10) { s.x = -10;}
 
 
+    // wraparound asteroides
+    for (int i = 0; i < basteroidsnb; ++i) {
+
+        if (ba[i].y < -90) {ba[i].y = windowHeight +90;
+        }
+        else if (ba[i].y >= windowHeight + 90) {ba[i].y = - 90;
+        }
+
+        if (ba[i].x < -90) {ba[i].x = windowWidth + 90;
+        }
+        else if (ba[i].x >= windowWidth + 90) {ba[i].x = -90;
+        }
+
+        ba[i].x += ba[i].vit * ba[i].dir.x;
+        ba[i].y += ba[i].vit * ba[i].dir.y;
+    }
 }
 
 int main() {
 
-    s.vit = 0.5;
+    s.vit = 0.15;
     s.angle = -90;  // - 90 car sa permet d'effectuer une poussée vers l'avant
     s.x = 640;
     s.y = 340;
 
     s.dir = (sfVector2f){0, 0};
+
 
     int windowWidth = sfVideoMode_getDesktopMode().width / 2;
     int windowHeight = sfVideoMode_getDesktopMode().height / 2;
@@ -108,7 +195,7 @@ int main() {
     sfCircleShape_setRadius(ship, Size / 2);
 
 
-    sfTexture* vaisseau = sfTexture_createFromFile("ship.png", NULL);
+    sfTexture* vaisseau = sfTexture_createFromFile("vaiss.png", NULL);
     sfCircleShape_setTexture (ship, vaisseau,1);
     sfCircleShape_setOrigin(ship, (sfVector2f) {25,25});
 
@@ -123,6 +210,11 @@ int main() {
     //Création du Press echap for exit
     sfText* Exit = sfText_create();
 */
+
+
+    BigAsteroids();
+//    Bullet();
+
     // Création d'un timer
     sfClock* timer = sfClock_create();
 
@@ -144,6 +236,7 @@ int main() {
             if (!gameover) {
                 Action();
 
+
             }
 
             sfClock_restart(timer);
@@ -160,6 +253,7 @@ int main() {
         if (sfKeyboard_isKeyPressed(sfKeyRight)) s.angle += 0.1 ;
         if (sfKeyboard_isKeyPressed(sfKeyLeft)) s.angle-= 0.1 ;
 
+
         //sfRenderWindow_clear(app, sfBlack);
 
 
@@ -170,12 +264,36 @@ int main() {
         sfCircleShape_setPosition(ship, (sfVector2f) { s.x, s.y});
         sfCircleShape_setRotation(ship, s.angle +90 );
 
-        sfRenderWindow_drawShape(window, ship, NULL);
+        for (int i = 0; i < basteroidsnb; ++i) {
+    sfSprite_setPosition(ba[i].shape, (sfVector2f){ba[i].x, ba[i].y});
+    sfSprite_setRotation(ba[i].shape, ba[i].angle + 90);
+    sfRenderWindow_drawShape(window, ba[i].shape, NULL);
+        }
 
+ /*       for (int i = 0; i < bullet; ++i) {
+    sfSprite_setPosition(b[i].bullet, (sfVector2f){b[i].x, b[i].y});
+    sfSprite_setRotation(b[i].bullet, b[i].angle + 90);
+    sfRenderWindow_drawShape(window, b[i].bullet, NULL);
+        }*/
+
+
+
+        sfRenderWindow_drawShape(window, ship, NULL);
 
         sfRenderWindow_display(window);
     }
     // Détruit tout les éléments ci dessous / fenêtre / ship / temps / et les textes
+
+    for (int i = 0; i < basteroidsnb; ++i) {
+    sfSprite_destroy(ba[i].shape);
+    sfTexture_destroy(sfSprite_getTexture(ba[i].shape));
+    }
+
+    /*for (int i = 0; i < bullet; ++i) {
+    sfSprite_destroy(b[i].bullet);
+    sfTexture_destroy(sfSprite_getTexture(b[i].bullet));
+    }*/
+
     DestroyWindow(window);
     sfCircleShape_destroy(ship);
     sfTexture_destroy(vaisseau);
