@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1699974193 source:c:\la horde\quête 3\github\qu-te-3\asteroids\asteroids\main.c
+1700132997 source:c:\la horde\quête 3\github\qu-te-3\asteroids\asteroids\main.c
 	<stdio.h>
 	<stdlib.h>
 	<SFML/Graphics.h>
 	<time.h>
+	<math.h>
 
 1698241179 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics.h
 	<SFML/Window.h>
@@ -352,7 +353,7 @@
 	<SFML/Graphics/Types.h>
 	<SFML/System/Vector2.h>
 
-1699635186 source:c:\la horde\quête 3\github\qu-te-3\asteroids\asteroids\src\window.c
+1700061785 source:c:\la horde\quête 3\github\qu-te-3\asteroids\asteroids\src\window.c
 	"window.h"
 	<stdio.h>
 	<stdlib.h>

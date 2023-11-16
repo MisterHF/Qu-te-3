@@ -10,6 +10,7 @@ void InitWindow(sfRenderWindow** window){
 
     sfVideoMode mode = {windowWidth, windowHeight, 32};
     *window = sfRenderWindow_create(mode, "Asteroids", sfResize | sfClose, NULL);
+    sfRenderWindow_setFramerateLimit(window, 120);
 
     if (!*window){
 

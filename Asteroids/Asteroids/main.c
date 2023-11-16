@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <SFML/Graphics.h>
 #include <time.h>
+#include <math.h>
 
 #define bool  _Bool
 #define false 0
@@ -13,6 +14,8 @@ bool gameover = 0;
 
 int Size = 50;
 
+float delta;
+
 int score = 0;
 int speed = 1;
 int basteroidsnb = 5;
@@ -23,6 +26,7 @@ struct Ship {      // Tableau du vaisseau
     float y;
     float angle;
     float vit;
+    sfVector2f str;
     sfVector2f dir;
 };
 
@@ -167,14 +171,44 @@ void Action() {
         else if (ba[i].x >= windowWidth + 90) {ba[i].x = -90;
         }
 
+        //deplacement ast
         ba[i].x += ba[i].vit * ba[i].dir.x;
         ba[i].y += ba[i].vit * ba[i].dir.y;
     }
+
+    for (int i = 0; i < basteroidsnb; ++i) {
+        float distance_x = ba[i].x - s.x;
+        float distance_y = ba[i].y - s.y;
+        float distance = sqrt(distance_x * distance_x + distance_y * distance_y);
+        if (distance < 40 + 25) {
+            s.y = 0;
+            s.x = 0;
+            printf("mort");
+        }
+
+
+
+
+    }
 }
+
+int Delta(sfClock* deltaclock){
+
+
+sfTime dtime = sfClock_getElapsedTime(deltaclock);
+delta =sfTime_asMilliseconds(dtime);
+sfClock_restart(deltaclock);
+
+return 0;;
+};
+
+
+
+
 
 int main() {
 
-    s.vit = 0.15;
+    s.vit = 0.009   ;
     s.angle = -90;  // - 90 car sa permet d'effectuer une poussée vers l'avant
     s.x = 640;
     s.y = 340;
@@ -182,10 +216,13 @@ int main() {
     s.dir = (sfVector2f){0, 0};
 
 
+    sfClock* deltaclock = sfClock_create();
+
     int windowWidth = sfVideoMode_getDesktopMode().width / 2;
     int windowHeight = sfVideoMode_getDesktopMode().height / 2;
 
     sfRenderWindow* window = NULL;
+
 
     InitWindow(&window);
 
@@ -213,6 +250,7 @@ int main() {
 
 
     BigAsteroids();
+    Delta(deltaclock);
 //    Bullet();
 
     // Création d'un timer
@@ -246,12 +284,21 @@ int main() {
         if (sfKeyboard_isKeyPressed(sfKeyUp)) {
                 s.dir.x = cosf(s.angle * 3.14 / 180); // PI = 3.14 / par 180 pour passer en radians
                 s.dir.y = sinf(s.angle * 3.14 / 180);
-                s.x +=s.vit* s.dir.x;
-                s.y +=s.vit* s.dir.y;
+
+                s.vit = 1.0f;
 
         }
-        if (sfKeyboard_isKeyPressed(sfKeyRight)) s.angle += 0.1 ;
-        if (sfKeyboard_isKeyPressed(sfKeyLeft)) s.angle-= 0.1 ;
+        else {
+                s.vit *= 0.999f;
+
+        }
+
+    s.x +=  delta / 1000 * s.vit / 10 * s.dir.x;
+    s.y += delta / 1000 * s.vit / 10 * s.dir.y;
+
+
+    if (sfKeyboard_isKeyPressed(sfKeyRight)) s.angle += 0.1 ;
+    if (sfKeyboard_isKeyPressed(sfKeyLeft)) s.angle-= 0.1 ;
 
 
         //sfRenderWindow_clear(app, sfBlack);
@@ -301,7 +348,9 @@ int main() {
    // sfText_destroy(GameOver);
   //  sfText_destroy(Exit);
     sfClock_destroy(timer);
+    sfClock_destroy(deltaclock);
 
     return 0;
+
 }
 
