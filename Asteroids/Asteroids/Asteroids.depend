@@ -1,0 +1,363 @@
+# depslib dependency file v1.0
+1700235790 source:c:\la horde\quête 3\github\qu-te-3\asteroids\asteroids\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SFML/Graphics.h>
+	<time.h>
+	<math.h>
+
+1698241179 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics.h
+	<SFML/Window.h>
+	<SFML/Graphics/BlendMode.h>
+	<SFML/Graphics/CircleShape.h>
+	<SFML/Graphics/Color.h>
+	<SFML/Graphics/ConvexShape.h>
+	<SFML/Graphics/Font.h>
+	<SFML/Graphics/FontInfo.h>
+	<SFML/Graphics/Glyph.h>
+	<SFML/Graphics/Image.h>
+	<SFML/Graphics/PrimitiveType.h>
+	<SFML/Graphics/Rect.h>
+	<SFML/Graphics/RectangleShape.h>
+	<SFML/Graphics/RenderStates.h>
+	<SFML/Graphics/RenderTexture.h>
+	<SFML/Graphics/RenderWindow.h>
+	<SFML/Graphics/Shader.h>
+	<SFML/Graphics/Shape.h>
+	<SFML/Graphics/Sprite.h>
+	<SFML/Graphics/Text.h>
+	<SFML/Graphics/Texture.h>
+	<SFML/Graphics/Transform.h>
+	<SFML/Graphics/Transformable.h>
+	<SFML/Graphics/Vertex.h>
+	<SFML/Graphics/VertexArray.h>
+	<SFML/Graphics/VertexBuffer.h>
+	<SFML/Graphics/View.h>
+
+1698241179 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\window.h
+	<SFML/System.h>
+	<SFML/Window/Clipboard.h>
+	<SFML/Window/Context.h>
+	<SFML/Window/Cursor.h>
+	<SFML/Window/Event.h>
+	<SFML/Window/Joystick.h>
+	<SFML/Window/JoystickIdentification.h>
+	<SFML/Window/Keyboard.h>
+	<SFML/Window/Mouse.h>
+	<SFML/Window/Sensor.h>
+	<SFML/Window/Touch.h>
+	<SFML/Window/VideoMode.h>
+	<SFML/Window/Window.h>
+
+1698241179 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\system.h
+	<SFML/Config.h>
+	<SFML/System/Clock.h>
+	<SFML/System/InputStream.h>
+	<SFML/System/Mutex.h>
+	<SFML/System/Sleep.h>
+	<SFML/System/Thread.h>
+	<SFML/System/Time.h>
+	<SFML/System/Vector2.h>
+	<SFML/System/Vector3.h>
+
+1698241179 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\config.h
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\system\clock.h
+	<SFML/System/Export.h>
+	<SFML/System/Time.h>
+	<SFML/System/Types.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\system\export.h
+	<SFML/Config.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\system\time.h
+	<SFML/System/Export.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\system\types.h
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\system\inputstream.h
+	<SFML/System/Export.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\system\mutex.h
+	<SFML/System/Export.h>
+	<SFML/System/Types.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\system\sleep.h
+	<SFML/System/Export.h>
+	<SFML/System/Time.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\system\thread.h
+	<SFML/System/Export.h>
+	<SFML/System/Types.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\system\vector2.h
+	<SFML/System/Export.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\system\vector3.h
+	<SFML/System/Export.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\window\clipboard.h
+	<SFML/Window/Export.h>
+	<SFML/Window/Types.h>
+
+1698241181 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\window\export.h
+	<SFML/Config.h>
+
+1698241181 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\window\types.h
+
+1698241181 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\window\context.h
+	<SFML/Window/Export.h>
+	<SFML/Window/Types.h>
+	<SFML/Window/Window.h>
+
+1698241181 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\window\window.h
+	<SFML/Window/Export.h>
+	<SFML/Window/Event.h>
+	<SFML/Window/VideoMode.h>
+	<SFML/Window/WindowHandle.h>
+	<SFML/Window/Types.h>
+	<SFML/System/Vector2.h>
+
+1698241181 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\window\event.h
+	<SFML/Window/Export.h>
+	<SFML/Window/Joystick.h>
+	<SFML/Window/Keyboard.h>
+	<SFML/Window/Mouse.h>
+	<SFML/Window/Sensor.h>
+
+1698241181 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\window\joystick.h
+	<SFML/Window/Export.h>
+	<SFML/Window/JoystickIdentification.h>
+
+1698241181 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\window\joystickidentification.h
+	<SFML/Window/Export.h>
+
+1698241181 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\window\keyboard.h
+	<SFML/Window/Export.h>
+
+1698241181 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\window\mouse.h
+	<SFML/Window/Export.h>
+	<SFML/Window/Types.h>
+	<SFML/System/Vector2.h>
+
+1698241181 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\window\sensor.h
+	<SFML/Window/Export.h>
+	<SFML/Window/Types.h>
+	<SFML/System/Vector3.h>
+
+1698241181 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\window\videomode.h
+	<SFML/Window/Export.h>
+	<stddef.h>
+
+1698241181 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\window\windowhandle.h
+	<SFML/Window/Export.h>
+
+1698241181 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\window\cursor.h
+	<SFML/System/Vector2.h>
+	<SFML/Window/Export.h>
+	<SFML/Window/Types.h>
+
+1698241181 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\window\touch.h
+	<SFML/Window/Export.h>
+	<SFML/Window/Types.h>
+	<SFML/System/Vector2.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\blendmode.h
+	<SFML/Graphics/Export.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\export.h
+	<SFML/Config.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\circleshape.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/Color.h>
+	<SFML/Graphics/Rect.h>
+	<SFML/Graphics/Transform.h>
+	<SFML/Graphics/Types.h>
+	<SFML/System/Vector2.h>
+	<stddef.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\color.h
+	<SFML/Graphics/Export.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\rect.h
+	<SFML/Graphics/Export.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\transform.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/Rect.h>
+	<SFML/Graphics/Types.h>
+	<SFML/System/Vector2.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\types.h
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\convexshape.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/Color.h>
+	<SFML/Graphics/Rect.h>
+	<SFML/Graphics/Transform.h>
+	<SFML/Graphics/Types.h>
+	<SFML/System/Vector2.h>
+	<stddef.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\font.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/FontInfo.h>
+	<SFML/Graphics/Glyph.h>
+	<SFML/Graphics/Types.h>
+	<SFML/System/InputStream.h>
+	<stddef.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\fontinfo.h
+	<SFML/Graphics/Export.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\glyph.h
+	<SFML/Graphics/Rect.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\image.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/Color.h>
+	<SFML/Graphics/Rect.h>
+	<SFML/Graphics/Types.h>
+	<SFML/System/InputStream.h>
+	<SFML/System/Vector2.h>
+	<stddef.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\primitivetype.h
+	<SFML/Graphics/Export.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\rectangleshape.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/Color.h>
+	<SFML/Graphics/Rect.h>
+	<SFML/Graphics/Transform.h>
+	<SFML/Graphics/Types.h>
+	<SFML/System/Vector2.h>
+	<stddef.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\renderstates.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/BlendMode.h>
+	<SFML/Graphics/Transform.h>
+	<SFML/Graphics/Types.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\rendertexture.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/Color.h>
+	<SFML/Graphics/Rect.h>
+	<SFML/Graphics/Types.h>
+	<SFML/Graphics/PrimitiveType.h>
+	<SFML/Graphics/RenderStates.h>
+	<SFML/Graphics/Vertex.h>
+	<SFML/Window/Window.h>
+	<SFML/System/Vector2.h>
+	<stddef.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\vertex.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/Color.h>
+	<SFML/System/Vector2.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\renderwindow.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/Color.h>
+	<SFML/Graphics/Rect.h>
+	<SFML/Graphics/Types.h>
+	<SFML/Graphics/PrimitiveType.h>
+	<SFML/Graphics/RenderStates.h>
+	<SFML/Graphics/Vertex.h>
+	<SFML/Window/Event.h>
+	<SFML/Window/VideoMode.h>
+	<SFML/Window/WindowHandle.h>
+	<SFML/Window/Window.h>
+	<SFML/System/Vector2.h>
+	<stddef.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\shader.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/Color.h>
+	<SFML/Graphics/Glsl.h>
+	<SFML/Graphics/Transform.h>
+	<SFML/Graphics/Types.h>
+	<SFML/System/InputStream.h>
+	<SFML/System/Vector2.h>
+	<SFML/System/Vector3.h>
+	<stddef.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\glsl.h
+	<SFML/Graphics/Transform.h>
+	<SFML/Graphics/Color.h>
+	<SFML/System/Vector2.h>
+	<SFML/System/Vector3.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\shape.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/Color.h>
+	<SFML/Graphics/Rect.h>
+	<SFML/Graphics/Transform.h>
+	<SFML/Graphics/Types.h>
+	<SFML/System/Vector2.h>
+	<stddef.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\sprite.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/BlendMode.h>
+	<SFML/Graphics/Color.h>
+	<SFML/Graphics/Rect.h>
+	<SFML/Graphics/Transform.h>
+	<SFML/Graphics/Types.h>
+	<SFML/System/Vector2.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\text.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/Color.h>
+	<SFML/Graphics/Rect.h>
+	<SFML/Graphics/Types.h>
+	<SFML/Graphics/Transform.h>
+	<SFML/System/Vector2.h>
+	<stddef.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\texture.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/Rect.h>
+	<SFML/Graphics/Types.h>
+	<SFML/Window/Types.h>
+	<SFML/System/InputStream.h>
+	<SFML/System/Vector2.h>
+	<stddef.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\transformable.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/Types.h>
+	<SFML/Graphics/Transform.h>
+	<SFML/System/Vector2.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\vertexarray.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/PrimitiveType.h>
+	<SFML/Graphics/Rect.h>
+	<SFML/Graphics/Types.h>
+	<SFML/Graphics/Vertex.h>
+	<stddef.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\vertexbuffer.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/PrimitiveType.h>
+	<SFML/Graphics/Types.h>
+	<SFML/Graphics/Vertex.h>
+	<stddef.h>
+
+1698241180 c:\la horde\quête 2 snake\csfml-2.5.1-windows-64-bit - copie\include\sfml\graphics\view.h
+	<SFML/Graphics/Export.h>
+	<SFML/Graphics/Rect.h>
+	<SFML/Graphics/Types.h>
+	<SFML/System/Vector2.h>
+
+1700061785 source:c:\la horde\quête 3\github\qu-te-3\asteroids\asteroids\src\window.c
+	"window.h"
+	<stdio.h>
+	<stdlib.h>
+
+1699635186 c:\la horde\quête 3\github\qu-te-3\asteroids\asteroids\include\window.h
+	<SFML/Graphics.h>
+
